@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Great Irish Potato Famine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>The Great Irish Potato Famine</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Overview')">Overview</button>
+  <button class="tablinks" onclick="openTab(event, 'Causes')">Causes</button>
+  <button class="tablinks" onclick="openTab(event, 'Effects')">Effects</button>
+  <button class="tablinks" onclick="openTab(event, 'Sources')">Sources</button>
+</div>
+
+<div id="Overview" class="tabcontent">
+  <h3>Overview</h3>
+  <p>The Great Irish Potato Famine was a period of mass starvation, disease, and emigration in Ireland between 1845 and 1852.</p>
+</div>
+
+<div id="Causes" class="tabcontent">
+  <h3>Causes</h3>
+  <p>The famine was caused by the water mold disease known as late blight, which resulted in crop failure three years in a row. This was exacerbated by political factors and economic ideology.</p>
+</div>
+
+<div id="Effects" class="tabcontent">
+  <h3>Effects</h3>
+  <p>The famine caused the deaths of about one million people and the emigration of another two million people.</p>
+</div>
+
+<div id="Sources" class="tabcontent">
+  <h3>Sources</h3>
+  <p>1. "The Great Irish Famine", History.com<br>2. "The Irish Potato Famine", BBC History</p>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
